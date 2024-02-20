@@ -32,7 +32,7 @@ namespace nanoFramework_HttpClient
         [System.SerializableAttribute()]
         internal enum BinaryResources : short
         {
-            DigiCertGlobalRootCA = 1766,
+            DigiCert_Global_Root_G2 = 24228,
         }
     }
 }

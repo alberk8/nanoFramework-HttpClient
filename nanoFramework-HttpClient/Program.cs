@@ -11,6 +11,8 @@ namespace nanoFramework_HttpClient
     {
         const string TheSsid = "wifissid";
         const string Password = "password";
+       
+
         static HttpClient _httpClient; 
 
         public static void Main()
@@ -49,10 +51,12 @@ namespace nanoFramework_HttpClient
             }
             Console.WriteLine("Hello from nanoFramework!");
 
-            var storeCA = Resource.GetBytes(Resource.BinaryResources.DigiCertGlobalRootCA);
+            Console.WriteLine("Date: " + DateTime.UtcNow.ToString());
+
+            var storeCA = Resource.GetBytes(Resource.BinaryResources.DigiCert_Global_Root_G2);
 
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://www.example.com"); 
+            _httpClient.BaseAddress = new Uri("https://www.example.org"); 
        
             _httpClient.HttpsAuthentCert = new System.Security.Cryptography.X509Certificates.X509Certificate(storeCA);
 

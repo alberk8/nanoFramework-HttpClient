@@ -11,7 +11,8 @@ namespace nanoFramework_HttpClient
     {
         const string TheSsid = "wifissid";
         const string Password = "password";
-       
+
+        
 
         static HttpClient _httpClient; 
 
@@ -35,6 +36,9 @@ namespace nanoFramework_HttpClient
                     {
                         Console.WriteLine($"ex: {WifiNetworkHelper.HelperException.Message}");
                     }
+                    Console.WriteLine("All Operation Stopped");
+                    Thread.Sleep(Timeout.Infinite);
+
                 }
                 else
                 {
